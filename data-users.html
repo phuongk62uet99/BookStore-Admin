@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>Accordion | Kiaalap - Kiaalap Admin Template</title>
+    <title>Data Table | Kiaalap - Kiaalap Admin Template</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- favicon
@@ -53,9 +53,16 @@
 		============================================ -->
     <link rel="stylesheet" href="css/calendar/fullcalendar.min.css">
     <link rel="stylesheet" href="css/calendar/fullcalendar.print.min.css">
-    <!-- accordions CSS
-         ============================================ -->
-    <link rel="stylesheet" href="css/accordions.css">
+    <!-- x-editor CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/editor/select2.css">
+    <link rel="stylesheet" href="css/editor/datetimepicker.css">
+    <link rel="stylesheet" href="css/editor/bootstrap-editable.css">
+    <link rel="stylesheet" href="css/editor/x-editor-style.css">
+    <!-- normalize CSS
+		============================================ -->
+    <link rel="stylesheet" href="css/data-table/bootstrap-table.css">
+    <link rel="stylesheet" href="css/data-table/bootstrap-editable.css">
     <!-- style CSS
 		============================================ -->
     <link rel="stylesheet" href="style.css">
@@ -73,6 +80,7 @@
 	<![endif]-->
     <!-- Start Left menu area -->
     <div class="left-sidebar-pro">
+
         <nav id="sidebar" class="">
             <div class="sidebar-header">
                 <a href="index.html"><img class="main-logo" src="img/logo/logo.png" alt="" /></a>
@@ -81,22 +89,16 @@
             <div class="left-custom-menu-adp-wrap comment-scrollbar">
                 <nav class="sidebar-nav left-sidebar-menu-pro">
                     <ul class="metismenu" id="menu1">
-                        <li>
+                        <li class="active">
                             <a class="has-arrow" href="index.html">
 								   <span class="educate-icon educate-home icon-wrap"></span>
 								   <span class="mini-click-non">Education</span>
 								</a>
                             <ul class="submenu-angle" aria-expanded="true">
                                 <li><a title="Dashboard v.1" href="index.html"><span class="mini-sub-pro">Dashboard v.1</span></a></li>
-                                <li><a title="Dashboard v.2" href="index-1.html"><span class="mini-sub-pro">Dashboard v.2</span></a></li>
-                                <li><a title="Dashboard v.3" href="index-2.html"><span class="mini-sub-pro">Dashboard v.3</span></a></li>
-                                <li><a title="Analytics" href="analytics.html"><span class="mini-sub-pro">Analytics</span></a></li>
-                                <li><a title="Widgets" href="widgets.html"><span class="mini-sub-pro">Widgets</span></a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a title="Landing Page" href="events.html" aria-expanded="false"><span class="educate-icon educate-event icon-wrap sub-icon-mg" aria-hidden="true"></span> <span class="mini-click-non">Event</span></a>
-                        </li>
+                       
                         <li>
                             <a class="has-arrow" href="all-professors.html" aria-expanded="false"><span class="educate-icon educate-professor icon-wrap"></span> <span class="mini-click-non">Professors</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
@@ -107,25 +109,6 @@
                             </ul>
                         </li>
                         <li>
-                            <a class="has-arrow" href="all-students.html" aria-expanded="false"><span class="educate-icon educate-student icon-wrap"></span> <span class="mini-click-non">Students</span></a>
-                            <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="All Students" href="all-students.html"><span class="mini-sub-pro">All Students</span></a></li>
-                                <li><a title="Add Students" href="add-student.html"><span class="mini-sub-pro">Add Student</span></a></li>
-                                <li><a title="Edit Students" href="edit-student.html"><span class="mini-sub-pro">Edit Student</span></a></li>
-                                <li><a title="Students Profile" href="student-profile.html"><span class="mini-sub-pro">Student Profile</span></a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-course icon-wrap"></span> <span class="mini-click-non">Courses</span></a>
-                            <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="All Courses" href="all-courses.html"><span class="mini-sub-pro">All Courses</span></a></li>
-                                <li><a title="Add Courses" href="add-course.html"><span class="mini-sub-pro">Add Course</span></a></li>
-                                <li><a title="Edit Courses" href="edit-course.html"><span class="mini-sub-pro">Edit Course</span></a></li>
-                                <li><a title="Courses Profile" href="course-info.html"><span class="mini-sub-pro">Courses Info</span></a></li>
-                                <li><a title="course Payment" href="course-payment.html"><span class="mini-sub-pro">Courses Payment</span></a></li>
-                            </ul>
-                        </li>
-                        <li>
                             <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-library icon-wrap"></span> <span class="mini-click-non">Library</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
                                 <li><a title="All Library" href="library-assets.html"><span class="mini-sub-pro">Library Assets</span></a></li>
@@ -133,47 +116,7 @@
                                 <li><a title="Edit Library" href="edit-library-assets.html"><span class="mini-sub-pro">Edit Library Asset</span></a></li>
                             </ul>
                         </li>
-                        <li>
-                            <a class="has-arrow" href="all-courses.html" aria-expanded="false"><span class="educate-icon educate-department icon-wrap"></span> <span class="mini-click-non">Departments</span></a>
-                            <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Departments List" href="departments.html"><span class="mini-sub-pro">Departments List</span></a></li>
-                                <li><a title="Add Departments" href="add-department.html"><span class="mini-sub-pro">Add Departments</span></a></li>
-                                <li><a title="Edit Departments" href="edit-department.html"><span class="mini-sub-pro">Edit Departments</span></a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-message icon-wrap"></span> <span class="mini-click-non">Mailbox</span></a>
-                            <ul class="submenu-angle" aria-expanded="false">
-                                <li><a title="Inbox" href="mailbox.html"><span class="mini-sub-pro">Inbox</span></a></li>
-                                <li><a title="View Mail" href="mailbox-view.html"><span class="mini-sub-pro">View Mail</span></a></li>
-                                <li><a title="Compose Mail" href="mailbox-compose.html"><span class="mini-sub-pro">Compose Mail</span></a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-interface icon-wrap"></span> <span class="mini-click-non">Interface</span></a>
-                            <ul class="submenu-angle interface-mini-nb-dp" aria-expanded="false">
-                                <li><a title="Google Map" href="google-map.html"><span class="mini-sub-pro">Google Map</span></a></li>
-                                <li><a title="Data Maps" href="data-maps.html"><span class="mini-sub-pro">Data Maps</span></a></li>
-                                <li><a title="Pdf Viewer" href="pdf-viewer.html"><span class="mini-sub-pro">Pdf Viewer</span></a></li>
-                                <li><a title="X-Editable" href="x-editable.html"><span class="mini-sub-pro">X-Editable</span></a></li>
-                                <li><a title="Code Editor" href="code-editor.html"><span class="mini-sub-pro">Code Editor</span></a></li>
-                                <li><a title="Tree View" href="tree-view.html"><span class="mini-sub-pro">Tree View</span></a></li>
-                                <li><a title="Preloader" href="preloader.html"><span class="mini-sub-pro">Preloader</span></a></li>
-                                <li><a title="Images Cropper" href="images-cropper.html"><span class="mini-sub-pro">Images Cropper</span></a></li>
-                            </ul>
-                        </li>
-                        <li>
-                            <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-charts icon-wrap"></span> <span class="mini-click-non">Charts</span></a>
-                            <ul class="submenu-angle chart-mini-nb-dp" aria-expanded="false">
-                                <li><a title="Bar Charts" href="bar-charts.html"><span class="mini-sub-pro">Bar Charts</span></a></li>
-                                <li><a title="Line Charts" href="line-charts.html"><span class="mini-sub-pro">Line Charts</span></a></li>
-                                <li><a title="Area Charts" href="area-charts.html"><span class="mini-sub-pro">Area Charts</span></a></li>
-                                <li><a title="Rounded Charts" href="rounded-chart.html"><span class="mini-sub-pro">Rounded Charts</span></a></li>
-                                <li><a title="C3 Charts" href="c3.html"><span class="mini-sub-pro">C3 Charts</span></a></li>
-                                <li><a title="Sparkline Charts" href="sparkline.html"><span class="mini-sub-pro">Sparkline Charts</span></a></li>
-                                <li><a title="Peity Charts" href="peity.html"><span class="mini-sub-pro">Peity Charts</span></a></li>
-                            </ul>
-                        </li>
+                       
                         <li>
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-data-table icon-wrap"></span> <span class="mini-click-non">Data Tables</span></a>
                             <ul class="submenu-angle" aria-expanded="false">
@@ -184,23 +127,8 @@
                         <li>
                             <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-form icon-wrap"></span> <span class="mini-click-non">Forms Elements</span></a>
                             <ul class="submenu-angle form-mini-nb-dp" aria-expanded="false">
-                                <li><a title="Basic Form Elements" href="basic-form-element.html"><span class="mini-sub-pro">Bc Form Elements</span></a></li>
                                 <li><a title="Advance Form Elements" href="advance-form-element.html"><span class="mini-sub-pro">Ad Form Elements</span></a></li>
-                                <li><a title="Password Meter" href="password-meter.html"><span class="mini-sub-pro">Password Meter</span></a></li>
                                 <li><a title="Multi Upload" href="multi-upload.html"><span class="mini-sub-pro">Multi Upload</span></a></li>
-                                <li><a title="Text Editor" href="tinymc.html"><span class="mini-sub-pro">Text Editor</span></a></li>
-                                <li><a title="Dual List Box" href="dual-list-box.html"><span class="mini-sub-pro">Dual List Box</span></a></li>
-                            </ul>
-                        </li>
-                        <li class="active">
-                            <a class="has-arrow" href="mailbox.html" aria-expanded="false"><span class="educate-icon educate-apps icon-wrap"></span> <span class="mini-click-non">App views</span></a>
-                            <ul class="submenu-angle app-mini-nb-dp" aria-expanded="false">
-                                <li><a title="Notifications" href="notifications.html"><span class="mini-sub-pro">Notifications</span></a></li>
-                                <li><a title="Alerts" href="alerts.html"><span class="mini-sub-pro">Alerts</span></a></li>
-                                <li><a title="Modals" href="modals.html"><span class="mini-sub-pro">Modals</span></a></li>
-                                <li><a title="Buttons" href="buttons.html"><span class="mini-sub-pro">Buttons</span></a></li>
-                                <li><a title="Tabs" href="tabs.html"><span class="mini-sub-pro">Tabs</span></a></li>
-                                <li><a title="Accordion" href="accordion.html"><span class="mini-sub-pro">Accordion</span></a></li>
                             </ul>
                         </li>
                         <li id="removable">
@@ -218,6 +146,9 @@
                 </nav>
             </div>
         </nav>
+
+
+
     </div>
     <!-- End Left menu area -->
     <!-- Start Welcome area -->
@@ -1061,7 +992,7 @@
                                         <ul class="breadcome-menu">
                                             <li><a href="#">Home</a> <span class="bread-slash">/</span>
                                             </li>
-                                            <li><span class="bread-blod">Accordion</span>
+                                            <li><span class="bread-blod">Data Table</span>
                                             </li>
                                         </ul>
                                     </div>
@@ -1072,126 +1003,539 @@
                 </div>
             </div>
         </div>
-        <!-- accordion start-->
-        <div class="edu-accordion-area mg-b-15">
+        <!-- Static Table Start -->
+        <div class="data-table-area mg-b-15">
             <div class="container-fluid">
                 <div class="row">
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <div class="tab-content-details mg-b-30">
-                            <h2>Custom Animate accordion Bootstrap</h2>
-                            <p>These are the Custom Animate accordion Bootstrap. Using animate bounce, flash, pulse, rubberBand, shake, swing, tada, wobble, jello, bounceIn, bounceInDown, bounceInLeft, bounceInRight, bounceInUp, fadeIn, fadeInDown, fadeInDownBig,
-                                fadeInLeft, fadeInLeftBig, fadeInRight, fadeInRightBig, fadeInUp, fadeInUpBig, flipInX, flipInY, lightSpeedIn, rotateIn, rotateInDownLeft, rotateInDownRight, rotateInUpLeft, rotateInUpRight, rollIn, zoomIn, zoomInDown,
-                                zoomInLeft, zoomInRight, zoomInUp etc.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="admin-pro-accordion-wrap shadow-inner responsive-mg-b-30">
-                            <div class="alert-title">
-                                <h2>Animate bounce Accordion</h2>
-                                <p>These are the Custom bootstrap Animate bounce Accordion style 1</p>
-                            </div>
-                            <div class="panel-group edu-custon-design" id="accordion">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading accordion-head">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">
-									 Collapsible Group 1</a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapse1" class="panel-collapse panel-ic collapse in">
-                                        <div class="panel-body admin-panel-content animated bounce">
-                                            <p>It was popularised in the 1960s with the release of Letraset sheets of the containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions.</p>
-                                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua of Lorem Ipsum.</p>
-                                            <p> Ut enim adminim veniam, quis nostrud exercitation ullamco laboris nisis ut aliquip ex ea commodo consequat consectetur adipisicing elit.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading accordion-head">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">
-									 Collapsible Group 1</a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapse2" class="panel-collapse panel-ic collapse">
-                                        <div class="panel-body admin-panel-content animated bounce">
-                                            <p>It was popularised in the 1960s with the release of Letraset sheets of the containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions.</p>
-                                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua of Lorem Ipsum.</p>
-                                            <p> Ut enim adminim veniam, quis nostrud exercitation ullamco laboris nisis ut aliquip ex ea commodo consequat consectetur adipisicing elit.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading accordion-head">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">
-									 Collapsible Group 1</a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapse3" class="panel-collapse panel-ic collapse">
-                                        <div class="panel-body admin-panel-content animated bounce">
-                                            <p>It was popularised in the 1960s with the release of Letraset sheets of the containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions.</p>
-                                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua of Lorem Ipsum.</p>
-                                            <p> Ut enim adminim veniam, quis nostrud exercitation ullamco laboris nisis ut aliquip ex ea commodo consequat consectetur adipisicing elit.</p>
-                                        </div>
-                                    </div>
+                        <div class="sparkline13-list">
+                            <div class="sparkline13-hd">
+                                <div class="main-sparkline13-hd">
+                                    <!-- <h1>Projects <span class="table-project-n">Data</span> Table</h1> -->
+                                    <h1>Dữ liệu sách</h1>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12">
-                        <div class="admin-pro-accordion-wrap shadow-inner">
-                            <div class="alert-title">
-                                <h2>Animate flash Accordion</h2>
-                                <p>These are the Custom bootstrap Animate flash Accordion style 2</p>
-                            </div>
-                            <div class="panel-group edu-custon-design" id="accordion2">
-                                <div class="panel panel-default">
-                                    <div class="panel-heading accordion-head">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapse4">
-									 Collapsible Group 2</a>
-                                        </h4>
+                            <div class="sparkline13-graph">
+                                <div class="datatable-dashv1-list custom-datatable-overright">
+                                    <div id="toolbar">
+                                        <select class="form-control dt-tb">
+											<option value="">Export Basic</option>
+											<option value="all">Export All</option>
+											<option value="selected">Export Selected</option>
+										</select>
                                     </div>
-                                    <div id="collapse4" class="panel-collapse panel-ic collapse in">
-                                        <div class="panel-body admin-panel-content animated flash">
-                                            <p>It was popularised in the 1960s with the release of Letraset sheets of the containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions.</p>
-                                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua of Lorem Ipsum.</p>
-                                            <p> Ut enim adminim veniam, quis nostrud exercitation ullamco laboris nisis ut aliquip ex ea commodo consequat consectetur adipisicing elit.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading accordion-head">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapse5">
-									 Collapsible Group 2</a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapse5" class="panel-collapse panel-ic collapse">
-                                        <div class="panel-body admin-panel-content animated flash">
-                                            <p>It was popularised in the 1960s with the release of Letraset sheets of the containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions.</p>
-                                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua of Lorem Ipsum.</p>
-                                            <p> Ut enim adminim veniam, quis nostrud exercitation ullamco laboris nisis ut aliquip ex ea commodo consequat consectetur adipisicing elit.</p>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="panel panel-default">
-                                    <div class="panel-heading accordion-head">
-                                        <h4 class="panel-title">
-                                            <a data-toggle="collapse" data-parent="#accordion2" href="#collapse6">
-									 Collapsible Group 2</a>
-                                        </h4>
-                                    </div>
-                                    <div id="collapse6" class="panel-collapse panel-ic collapse">
-                                        <div class="panel-body admin-panel-content animated flash">
-                                            <p>It was popularised in the 1960s with the release of Letraset sheets of the containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions.</p>
-                                            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit,sed do eiusmod tempor incididunt ut labore et dolore magna aliqua of Lorem Ipsum.</p>
-                                            <p> Ut enim adminim veniam, quis nostrud exercitation ullamco laboris nisis ut aliquip ex ea commodo consequat consectetur adipisicing elit.</p>
-                                        </div>
-                                    </div>
+                                    <table id="table" data-toggle="table" data-pagination="true" data-search="true" data-show-columns="true" data-show-pagination-switch="true" data-show-refresh="true" data-key-events="true" data-show-toggle="true" data-resizable="true" data-cookie="true"
+                                        data-cookie-id-table="saveId" data-show-export="true" data-click-to-select="true" data-toolbar="#toolbar">
+                                        <thead>
+                                            <tr>
+                                                <th data-field="state" data-checkbox="true"></th>
+                                                <th data-field="id">STT</th>
+                                                <th data-field="name" data-editable="true">Mã sách</th>
+                                                <th data-field="email" data-editable="true">Tên sách</th>
+                                                <th data-field="phone" data-editable="true">Tác giả</th>
+                                                <th data-field="complete">Giá nhập</th>
+                                                <th data-field="task" data-editable="true">Giá bán</th>
+                                                <th data-field="date" data-editable="true">Số lượng trong kho</th>
+                                                <th data-field="price" data-editable="true">Ngày nhập</th>
+                                                <th data-field="action">Action</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <!-- <td class="datatable-ct"><span class="pie">45.000 VNĐ</span>
+                                                </td> -->
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <!-- <td class="datatable-ct"><span class="pie">45.000 VNĐ</span>
+                                                </td> -->
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <!-- <td class="datatable-ct"><span class="pie">45.000 VNĐ</span>
+                                                </td> -->
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <!-- <td class="datatable-ct"><span class="pie">45.000 VNĐ</span>
+                                                </td> -->
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <!-- <td class="datatable-ct"><span class="pie">45.000 VNĐ</span>
+                                                </td> -->
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <!-- <td class="datatable-ct"><span class="pie">45.000 VNĐ</span>
+                                                </td> -->
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <!-- <td class="datatable-ct"><span class="pie">45.000 VNĐ</span>
+                                                </td> -->
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <!-- <td class="datatable-ct"><span class="pie">45.000 VNĐ</span>
+                                                </td> -->
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <!-- <td class="datatable-ct"><span class="pie">45.000 VNĐ</span>
+                                                </td> -->
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <!-- <td class="datatable-ct"><span class="pie">45.000 VNĐ</span>
+                                                </td> -->
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <!-- <td class="datatable-ct"><span class="pie">45.000 VNĐ</span>
+                                                </td> -->
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <!-- <td class="datatable-ct"><span class="pie">45.000 VNĐ</span>
+                                                </td> -->
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <td></td>
+                                                <td>1</td>
+                                                <td>BOOKHD0001</td>
+                                                <td>Nhà giả kim</td>
+                                                <td>Nguyễn Văn A</td>
+                                                <td>45.000 VNĐ</td>
+                                                <td>53.000 VNĐ</td>
+                                                <td>150</td>
+                                                <td>Jul 14, 2017</td>
+                                                <td class="datatable-ct"><i class="fa fa-check"></i>
+                                                </td>
+                                            </tr>
+                                            
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                         </div>
@@ -1199,7 +1543,7 @@
                 </div>
             </div>
         </div>
-        <!-- accordion End-->
+        <!-- Static Table End -->
         <div class="footer-copyright-area">
             <div class="container-fluid">
                 <div class="row">
@@ -1245,6 +1589,29 @@
 		============================================ -->
     <script src="js/metisMenu/metisMenu.min.js"></script>
     <script src="js/metisMenu/metisMenu-active.js"></script>
+    <!-- data table JS
+		============================================ -->
+    <script src="js/data-table/bootstrap-table.js"></script>
+    <script src="js/data-table/tableExport.js"></script>
+    <script src="js/data-table/data-table-active.js"></script>
+    <script src="js/data-table/bootstrap-table-editable.js"></script>
+    <script src="js/data-table/bootstrap-editable.js"></script>
+    <script src="js/data-table/bootstrap-table-resizable.js"></script>
+    <script src="js/data-table/colResizable-1.5.source.js"></script>
+    <script src="js/data-table/bootstrap-table-export.js"></script>
+    <!--  editable JS
+		============================================ -->
+    <script src="js/editable/jquery.mockjax.js"></script>
+    <script src="js/editable/mock-active.js"></script>
+    <script src="js/editable/select2.js"></script>
+    <script src="js/editable/moment.min.js"></script>
+    <script src="js/editable/bootstrap-datetimepicker.js"></script>
+    <script src="js/editable/bootstrap-editable.js"></script>
+    <script src="js/editable/xediable-active.js"></script>
+    <!-- Chart JS
+		============================================ -->
+    <script src="js/chart/jquery.peity.min.js"></script>
+    <script src="js/peity/peity-active.js"></script>
     <!-- tab JS
 		============================================ -->
     <script src="js/tab.js"></script>
@@ -1254,7 +1621,7 @@
     <!-- main JS
 		============================================ -->
     <script src="js/main.js"></script>
-	<!-- tawk chat JS
+    <!-- tawk chat JS
 		============================================ -->
     <script src="js/tawk-chat.js"></script>
 </body>
